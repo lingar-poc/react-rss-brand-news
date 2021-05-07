@@ -1,6 +1,12 @@
 import React from "react";
 import "./StaticTemplateStyle.css";
 
+/*
+Solution for images
+
+https://stackoverflow.com/a/66355497/9727918
+
+ */
 export function StaticTemplate() {
 
     return (
@@ -44,7 +50,7 @@ export function StaticTemplate() {
                             <div className="cl">&nbsp;</div>
                             <div className="posts">
                                 <div className="post">
-                                    <div className="image"><a href="#"><img src="css/images/post-1.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src={"images/post-1.jpg"}alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                         </h4>
@@ -53,7 +59,7 @@ export function StaticTemplate() {
                                     </div>
                                 </div>
                                 <div className="post last">
-                                    <div className="image"><a href="#"><img src="css/images/post-2.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-2.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Maecenas scelerisque sapien </a></h4>
                                         <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
@@ -62,7 +68,7 @@ export function StaticTemplate() {
                                 </div>
                                 <div className="cl">&nbsp;</div>
                                 <div className="post">
-                                    <div className="image"><a href="#"><img src="css/images/post-3.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-3.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Cras ac ultrices ipsum. </a></h4>
                                         <p>Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
@@ -70,7 +76,7 @@ export function StaticTemplate() {
                                     </div>
                                 </div>
                                 <div className="post last">
-                                    <div className="image"><a href="#"><img src="css/images/post-4.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-4.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Nunc ac lorem id ipsum.</a></h4>
                                         <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
@@ -86,7 +92,7 @@ export function StaticTemplate() {
                             <div className="cl">&nbsp;</div>
                             <div className="posts">
                                 <div className="post">
-                                    <div className="image"><a href="#"><img src="css/images/post-5.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-5.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                         </h4>
@@ -95,7 +101,7 @@ export function StaticTemplate() {
                                     </div>
                                 </div>
                                 <div className="post last">
-                                    <div className="image"><a href="#"><img src="css/images/post-6.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-6.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Maecenas scelerisque sapien </a></h4>
                                         <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
@@ -104,7 +110,7 @@ export function StaticTemplate() {
                                 </div>
                                 <div className="cl">&nbsp;</div>
                                 <div className="post">
-                                    <div className="image"><a href="#"><img src="css/images/post-1.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-1.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Cras ac ultrices ipsum. </a></h4>
                                         <p>Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
@@ -112,7 +118,7 @@ export function StaticTemplate() {
                                     </div>
                                 </div>
                                 <div className="post last">
-                                    <div className="image"><a href="#"><img src="css/images/post-1.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-1.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Nunc ac lorem id ipsum.</a></h4>
                                         <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
@@ -128,7 +134,7 @@ export function StaticTemplate() {
                             <div className="cl">&nbsp;</div>
                             <div className="posts">
                                 <div className="post">
-                                    <div className="image"><a href="#"><img src="css/images/post-7.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-7.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                         </h4>
@@ -137,7 +143,7 @@ export function StaticTemplate() {
                                     </div>
                                 </div>
                                 <div className="post last">
-                                    <div className="image"><a href="#"><img src="css/images/post-8.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-8.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Maecenas scelerisque sapien </a></h4>
                                         <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
@@ -146,7 +152,7 @@ export function StaticTemplate() {
                                 </div>
                                 <div className="cl">&nbsp;</div>
                                 <div className="post">
-                                    <div className="image"><a href="#"><img src="css/images/post-9.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-9.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Cras ac ultrices ipsum. </a></h4>
                                         <p>Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
@@ -154,7 +160,7 @@ export function StaticTemplate() {
                                     </div>
                                 </div>
                                 <div className="post last">
-                                    <div className="image"><a href="#"><img src="css/images/post-10.jpg" alt=""/></a></div>
+                                    <div className="image"><a href="#"><img src="images/post-10.jpg" alt=""/></a></div>
                                     <div className="data">
                                         <h4><a href="#">Nunc ac lorem id ipsum.</a></h4>
                                         <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
@@ -200,8 +206,8 @@ export function StaticTemplate() {
                         </div>
                     </div>
                     <div id="banners">
-                        <div className="banner"><a href="#"><img src="css/images/small-banner.gif" alt=""/></a></div>
-                        <div className="banner"><a href="#"><img src="css/images/big-banner.gif" alt=""/></a></div>
+                        <div className="banner"><a href="#"><img src="images/small-banner.gif" alt=""/></a></div>
+                        <div className="banner"><a href="#"><img src="images/big-banner.gif" alt=""/></a></div>
                     </div>
                     <div className="cl">&nbsp;</div>
                 </div>
@@ -213,7 +219,7 @@ export function StaticTemplate() {
                                 <div className="popular-posts">
                                     <ul>
                                         <li>
-                                            <div className="image"><a href="#"><img src="css/images/popular-1.jpg" alt=""/></a>
+                                            <div className="image"><a href="#"><img src="images/popular-1.jpg" alt=""/></a>
                                             </div>
                                             <div className="data">
                                                 <h5><a href="#">Cras nec lorem lectus</a></h5>
@@ -224,7 +230,7 @@ export function StaticTemplate() {
                                             <div className="cl">&nbsp;</div>
                                         </li>
                                         <li>
-                                            <div className="image"><a href="#"><img src="css/images/popular-2.jpg" alt=""/></a>
+                                            <div className="image"><a href="#"><img src="images/popular-2.jpg" alt=""/></a>
                                             </div>
                                             <div className="data">
                                                 <h5><a href="#">Lorem ipsum dolor sit amet</a></h5>
@@ -235,7 +241,7 @@ export function StaticTemplate() {
                                             <div className="cl">&nbsp;</div>
                                         </li>
                                         <li>
-                                            <div className="image"><a href="#"><img src="css/images/popular-3.jpg" alt=""/></a>
+                                            <div className="image"><a href="#"><img src="images/popular-3.jpg" alt=""/></a>
                                             </div>
                                             <div className="data">
                                                 <h5><a href="#">Nunc pellentesque pellentesque laoreet</a></h5>
