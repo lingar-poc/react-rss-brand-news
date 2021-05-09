@@ -1,10 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import './components/app-structure/AppMain.css';
 import {StaticTemplate} from "./components/static-template/StaticTemplate";
+import {AppHeader} from "./components/app-structure/AppHeader";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App shell">
+
+        <AppHeader/>
+    </div>
+  );
+
+
+
       {/*<header className="App-header">*/}
       {/*  /!*<img src={logo} className="App-logo" alt="logo" />*!/*/}
       {/*  <p>*/}
@@ -19,9 +28,13 @@ function App() {
       {/*    Learn React*/}
       {/*  </a>*/}
       {/*</header>*/}
-      <StaticTemplate/>
-    </div>
-  );
+      {/*<StaticTemplate/>*/}
+      {/*<header>*/}
+      {/*    /!*<StaticTemplate/>*!/*/}
+      {/*    */}
+      {/*</header>*/}
+
+
 }
 
 export default App;
