@@ -60,11 +60,8 @@ export function AppMainArea(props){
                                         <div className="image"><a href="#"><img src="images/popular-1.jpg" alt=""/></a>
                                         </div>
                                         <div className="data">
-                                            <h5><a href="#">Cras nec lorem lectus</a></h5>
-                                            <p>Lorem ipsum
-                                                Cras ac ultrices ipsum.dolor sit amet, consectetur adipiscing elit. Cras nec
-                                                lorem lectus, ut lacinia turpis. Nunc pellentesque pellentesque
-                                                laoreet. Lorem ipsum dolor sit amet, consectetur </p>
+                                            <h5><a href="#">The blessing of the LORD</a></h5>
+                                            <p>The blessing of the LORD, it maketh rich, and toil addeth nothing thereto. </p>
                                         </div>
                                         <div className="cl">&nbsp;</div>
                                     </li>
@@ -72,10 +69,8 @@ export function AppMainArea(props){
                                         <div className="image"><a href="#"><img src="images/popular-2.jpg" alt=""/></a>
                                         </div>
                                         <div className="data">
-                                            <h5><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec
-                                                lorem lectus, ut lacinia turpis. Nunc pellentesque pellentesque
-                                                laoreet. Lorem ipsum dolor sit amet, consectetur </p>
+                                            <h5><a href="#">Happiness is the Best</a></h5>
+                                            <p>Better is a handful of quietness, than both the hands full of labour and striving after wind. </p>
                                         </div>
                                         <div className="cl">&nbsp;</div>
                                     </li>
