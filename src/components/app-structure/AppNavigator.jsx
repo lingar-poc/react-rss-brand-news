@@ -9,7 +9,7 @@ export function AppNavigator() {
             <ul>
                 <li><NavLink exact to="/" activeClassName="active">HOME</NavLink></li>
                 <li><NavLink to="/fox" activeClassName="active">FOX</NavLink></li>
-                <li><NavLink to="/cbs" activeClassName="active">CBS</NavLink></li>
+                <li><NavLink to="/cnbc" activeClassName="active">CNBC</NavLink></li>
                 <li><NavLink to="/cnn" activeClassName="active">CNN</NavLink></li>
 
             </ul>

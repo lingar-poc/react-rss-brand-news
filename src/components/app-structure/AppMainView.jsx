@@ -15,8 +15,8 @@ export function AppMainView() {
                 <Route path="/fox">
                     <PostsA provider="FOX"/>
                 </Route>
-                <Route path="/cbs">
-                    <PostsA provider="CBS"/>
+                <Route path="/cnbc">
+                    <PostsA provider="CNBC"/>
                 </Route>
                 <Route path="/cnn">
                     <PostsA provider="CNN"/>

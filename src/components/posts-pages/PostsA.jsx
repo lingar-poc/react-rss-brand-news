@@ -5,8 +5,9 @@ export function PostsA(props){
     return(
         <div id="content">
             <div className="box">
-                <h2><span>Data will be come from <b >{props.provider}</b></span></h2>
-                <a href="#" className="see-all">See all articles in this category</a>
+                <h2><span>Coming soon... latest news from: <b >{props.provider}</b></span></h2>
+                <a href="https://github.com/lingar-poc/react-rss-brand-news"
+                   target="_blank" className="see-all">See The source code(=code files) of this project</a>
                 <div className="cl">&nbsp;</div>
                 <div className="posts">
                     <div className="post">
@@ -28,7 +29,7 @@ export function PostsA(props){
                     </div>
                     <div className="cl">&nbsp;</div>
                     <div className="post">
-                        <div className="image"><a href="#"><img src="images/post-3.jpg" alt=""/></a></div>
+                        <div className="image"><a href="#"><img src="images/post-7.jpg" alt=""/></a></div>
                         <div className="data">
                             <h4><a href="#">Cras ac ultrices ipsum. </a></h4>
                             <p><b>It's wrapped the content. It's good. </b>
@@ -45,7 +46,7 @@ export function PostsA(props){
                         </div>
                     </div>
                     <div className="post last">
-                        <div className="image"><a href="#"><img src="images/post-4.jpg" alt=""/></a></div>
+                        <div className="image"><a href="#"><img src="images/post-8.jpg" alt=""/></a></div>
                         <div className="data">
                             <h4><a href="#">Nunc ac lorem id ipsum.</a></h4>
                             <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
@@ -53,7 +54,7 @@ export function PostsA(props){
                         </div>
                     </div>
                     <div className="post">
-                        <div className="image"><a href="#"><img src={"images/post-1.jpg"}alt=""/></a></div>
+                        <div className="image"><a href="#"><img src={"images/post-10.jpg"}alt=""/></a></div>
                         <div className="data">
                             <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                             </h4>
@@ -79,7 +80,7 @@ export function PostsA(props){
                         </div>
                     </div>
                     <div className="post last">
-                        <div className="image"><a href="#"><img src="images/post-2.jpg" alt=""/></a></div>
+                        <div className="image"><a href="#"><img src="images/post-6.jpg" alt=""/></a></div>
                         <div className="data">
                             <h4><a href="#">Maecenas scelerisque sapien </a></h4>
                             <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi

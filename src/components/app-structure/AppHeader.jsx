@@ -6,9 +6,9 @@ export function AppHeader() {
 
     return (
         <header>
-
+            {/*TODO - Make proper logo. */}
             <div id="header">
-                <h1 id="logo"><a href="#">MEGAZZINE</a></h1>
+                <h1 id="logo"><a href="#">BRAND NEWS</a></h1>
                 <div className="top-bar">
                     <div className="links"><a href="#">SIGN IN</a> <a href="#">SIGN UP</a> <a href="#"
                                                                                               className="rss">SUBSCRIBE</a>

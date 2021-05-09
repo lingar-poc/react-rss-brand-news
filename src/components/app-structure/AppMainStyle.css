@@ -103,6 +103,22 @@ textarea {
 	width:980px;
 	padding:26px 8px;
 	margin:0 auto;
+
+}
+header{
+	padding: 26px  8px 0px;/*T RL B*/
+}
+
+footer{
+	padding: 0px  8px 26px;/*T RL B*/
+
+}
+header, main, footer{
+
+	width:980px;
+	margin:0 auto;
+	position: relative;
+
 }
 #header {
 	width:942px;
