@@ -31,7 +31,16 @@ export function PostsA(props){
                         <div className="image"><a href="#"><img src="images/post-3.jpg" alt=""/></a></div>
                         <div className="data">
                             <h4><a href="#">Cras ac ultrices ipsum. </a></h4>
-                            <p>Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
+                            <p><b>It's wrapped the content. It's good. </b>
+                                Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
+                                odio bibendum non dictum nisi posuere.
+                                Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
+                                odio bibendum non dictum nisi posuere.
+                                Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
+                                odio bibendum non dictum nisi posuere.
+                                Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
+                                odio bibendum non dictum nisi posuere.
+                                Vivamus adipiscing dui at turpis imperdiet congue. Fusce posuere augue et
                                 odio bibendum non dictum nisi posuere. </p>
                         </div>
                     </div>
