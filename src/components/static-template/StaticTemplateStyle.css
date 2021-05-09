@@ -99,7 +99,7 @@ textarea {
 	margin-right:0 !important;
 	margin-bottom:0 !important;
 }
-#shell {
+#shell, header, main, footer {
 	width:980px;
 	padding:26px 8px;
 	margin:0 auto;
