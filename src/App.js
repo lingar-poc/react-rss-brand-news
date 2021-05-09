@@ -1,14 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/app-structure/AppMain.css';
+import './components/app-structure/AppMainStyle.css';
 import {StaticTemplate} from "./components/static-template/StaticTemplate";
 import {AppHeader} from "./components/app-structure/AppHeader";
+import {AppMainArea} from "./components/app-structure/AppMainArea";
+import {PostsA} from "./components/posts-pages/PostsA";
+import {AppFooter} from "./components/app-structure/AppFooter";
 
 function App() {
   return (
     <div className="App shell">
 
         <AppHeader/>
+        <AppMainArea>
+            <PostsA/>
+        </AppMainArea>
+        <AppFooter/>
     </div>
   );
 

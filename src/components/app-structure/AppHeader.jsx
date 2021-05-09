@@ -1,10 +1,10 @@
 import React from "react";
-import "./AppMain.css";
+import "./AppMainStyle.css";
 
 export function AppHeader(){
 
     return(
-        <div>
+        <header>
 
             <div id="header">
                 <h1 id="logo"><a href="#">MEGAZZINE</a></h1>
@@ -35,6 +35,6 @@ export function AppHeader(){
                 </ul>
                 <div className="cl">&nbsp;</div>
             </div>
-        </div>
+        </header>
     )
 }
