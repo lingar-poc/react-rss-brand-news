@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link, NavLink
 } from "react-router-dom";
 import {PostsA} from "../posts-pages/PostsA";
 
@@ -13,10 +13,10 @@ export function AppNavigator() {
 
         <div id="navigation">
             <ul>
-                <li><Link to="/">HOME</Link></li>
-                <li><Link to="/fox" className="active">FOX</Link></li>
-                <li><Link to="/cbs">CBS</Link></li>
-                <li><Link to="/cnn">CNN</Link></li>
+                <li><NavLink exact to="/" activeClassName="active">HOME</NavLink></li>
+                <li><NavLink to="/fox" activeClassName="active">FOX</NavLink></li>
+                <li><NavLink to="/cbs" activeClassName="active">CBS</NavLink></li>
+                <li><NavLink to="/cnn" activeClassName="active">CNN</NavLink></li>
                 {/*<li><a href="#">ABOUT</a></li>*/}
                 {/*<li><a href="#">CONTACT</a></li>*/}
             </ul>
