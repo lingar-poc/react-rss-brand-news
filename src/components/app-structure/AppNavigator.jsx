@@ -1,11 +1,5 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link, NavLink
-} from "react-router-dom";
-import {PostsA} from "../posts-pages/PostsA";
+import {NavLink} from "react-router-dom";
 
 export function AppNavigator() {
     return (
@@ -17,8 +11,7 @@ export function AppNavigator() {
                 <li><NavLink to="/fox" activeClassName="active">FOX</NavLink></li>
                 <li><NavLink to="/cbs" activeClassName="active">CBS</NavLink></li>
                 <li><NavLink to="/cnn" activeClassName="active">CNN</NavLink></li>
-                {/*<li><a href="#">ABOUT</a></li>*/}
-                {/*<li><a href="#">CONTACT</a></li>*/}
+
             </ul>
             <div className="cl">&nbsp;</div>
         </div>)

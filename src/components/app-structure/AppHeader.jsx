@@ -2,9 +2,9 @@ import React from "react";
 import "./AppMainStyle.css";
 import {AppNavigator} from "./AppNavigator";
 
-export function AppHeader(){
+export function AppHeader() {
 
-    return(
+    return (
         <header>
 
             <div id="header">
@@ -27,17 +27,7 @@ export function AppHeader(){
             </div>
 
             <AppNavigator/>
-            {/*<div id="navigation">*/}
-            {/*    <ul>*/}
-            {/*        <li><a href="#">HOME</a></li>*/}
-            {/*        <li><a href="#" className="active">ARTICLES</a></li>*/}
-            {/*        <li><a href="#">PHOTOS</a></li>*/}
-            {/*        <li><a href="#">COMMUNITY</a></li>*/}
-            {/*        <li><a href="#">ABOUT</a></li>*/}
-            {/*        <li><a href="#">CONTACT</a></li>*/}
-            {/*    </ul>*/}
-            {/*    <div className="cl">&nbsp;</div>*/}
-            {/*</div>*/}
+
         </header>
     )
 }
