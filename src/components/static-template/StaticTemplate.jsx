@@ -83,6 +83,40 @@ export function StaticTemplate() {
                                             bibendum luctus. </p>
                                     </div>
                                 </div>
+                                <div className="post">
+                                    <div className="image"><a href="#"><img src={"images/post-1.jpg"}alt=""/></a></div>
+                                    <div className="data">
+                                        <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                                        </h4>
+                                        <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
+                                            bibendum luctus. </p>
+                                    </div>
+                                </div>
+                                <div className="post last">
+                                    <div className="image"><a href="#"><img src="images/post-2.jpg" alt=""/></a></div>
+                                    <div className="data">
+                                        <h4><a href="#">Maecenas scelerisque sapien </a></h4>
+                                        <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
+                                            bibendum luctus. </p>
+                                    </div>
+                                </div>
+                                <div className="post">
+                                    <div className="image"><a href="#"><img src={"images/post-1.jpg"}alt=""/></a></div>
+                                    <div className="data">
+                                        <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                                        </h4>
+                                        <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
+                                            bibendum luctus. </p>
+                                    </div>
+                                </div>
+                                <div className="post last">
+                                    <div className="image"><a href="#"><img src="images/post-2.jpg" alt=""/></a></div>
+                                    <div className="data">
+                                        <h4><a href="#">Maecenas scelerisque sapien </a></h4>
+                                        <p>Maecenas sodales auctor urna cursus facilisis. Cras rutrum justo id mi
+                                            bibendum luctus. </p>
+                                    </div>
+                                </div>
                                 <div className="cl">&nbsp;</div>
                             </div>
                         </div>
@@ -223,7 +257,8 @@ export function StaticTemplate() {
                                             </div>
                                             <div className="data">
                                                 <h5><a href="#">Cras nec lorem lectus</a></h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec
+                                                <p>Lorem ipsum
+                                                    Cras ac ultrices ipsum.dolor sit amet, consectetur adipiscing elit. Cras nec
                                                     lorem lectus, ut lacinia turpis. Nunc pellentesque pellentesque
                                                     laoreet. Lorem ipsum dolor sit amet, consectetur </p>
                                             </div>
