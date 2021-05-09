@@ -6,16 +6,22 @@ import {AppHeader} from "./components/app-structure/AppHeader";
 import {AppMainArea} from "./components/app-structure/AppMainArea";
 import {PostsA} from "./components/posts-pages/PostsA";
 import {AppFooter} from "./components/app-structure/AppFooter";
-
+import {AppMainView} from "./components/app-structure/AppMainView";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function App() {
   return (
     <div className="App shell">
-
+    <Router>
         <AppHeader/>
         <AppMainArea>
-            <PostsA/>
+            <AppMainView/>
+            {/*<PostsA provider = "All"/>*/}
+
         </AppMainArea>
         <AppFooter/>
+
+    </Router>
+
     </div>
   );
 
