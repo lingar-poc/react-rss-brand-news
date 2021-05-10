@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-rss-brand-news/static/css/main.7fc2852b.chunk.css",
-    "main.js": "/react-rss-brand-news/static/js/main.51b06be7.chunk.js",
-    "main.js.map": "/react-rss-brand-news/static/js/main.51b06be7.chunk.js.map",
+    "main.js": "/react-rss-brand-news/static/js/main.8b11c2d4.chunk.js",
+    "main.js.map": "/react-rss-brand-news/static/js/main.8b11c2d4.chunk.js.map",
     "runtime-main.js": "/react-rss-brand-news/static/js/runtime-main.820296c4.js",
     "runtime-main.js.map": "/react-rss-brand-news/static/js/runtime-main.820296c4.js.map",
     "static/js/2.26d95d34.chunk.js": "/react-rss-brand-news/static/js/2.26d95d34.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.820296c4.js",
     "static/js/2.26d95d34.chunk.js",
     "static/css/main.7fc2852b.chunk.css",
-    "static/js/main.51b06be7.chunk.js"
+    "static/js/main.8b11c2d4.chunk.js"
   ]
 }
