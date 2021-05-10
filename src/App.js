@@ -8,6 +8,12 @@ import {BrowserRouter as Router} from "react-router-dom";
 import "./components/app-structure/AppMainStyle.css";
 import {AppContainer} from "./components/app-structure/AppContainer";
 
+/**
+ *
+ * Branch: A-App-Structure-with-a-template
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function App() {
     return (
         <div className="">
