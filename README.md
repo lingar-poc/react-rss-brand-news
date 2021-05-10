@@ -1,7 +1,7 @@
 # react-rss-brand-news + Accessibility
 
 
-##First Step 
+## First Step 
 
 In this step we have created the first template for the website. 
 
