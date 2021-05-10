@@ -4,11 +4,18 @@ import {AppHeader} from "./components/app-structure/AppHeader";
 import {AppMainArea} from "./components/app-structure/AppMainArea";
 import {AppFooter} from "./components/app-structure/AppFooter";
 import {AppMainView} from "./components/app-structure/AppMainView";
-import {BrowserRouter as Router} from "react-router-dom";
+// import {BrowserRouter as Router} from "react-router-dom";
+import {HashRouter as Router} from "react-router-dom";
+
 import "./components/app-structure/AppMainStyle.css";
 import {AppContainer} from "./components/app-structure/AppContainer";
 
 /**
+ *Website:
+ * https://lingar-poc.github.io/react-rss-brand-news/
+ *
+ * U can npm run deploy for deploying it.(the current version will be deployed)
+ *
  *
  * Branch: A-App-Structure-with-a-template
  * @returns {JSX.Element}
