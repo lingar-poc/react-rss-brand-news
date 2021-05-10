@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-rss-brand-news/static/css/main.7fc2852b.chunk.css",
-    "main.js": "/react-rss-brand-news/static/js/main.b6507ac0.chunk.js",
-    "main.js.map": "/react-rss-brand-news/static/js/main.b6507ac0.chunk.js.map",
+    "main.js": "/react-rss-brand-news/static/js/main.76520f6c.chunk.js",
+    "main.js.map": "/react-rss-brand-news/static/js/main.76520f6c.chunk.js.map",
     "runtime-main.js": "/react-rss-brand-news/static/js/runtime-main.820296c4.js",
     "runtime-main.js.map": "/react-rss-brand-news/static/js/runtime-main.820296c4.js.map",
-    "static/js/2.26d95d34.chunk.js": "/react-rss-brand-news/static/js/2.26d95d34.chunk.js",
-    "static/js/2.26d95d34.chunk.js.map": "/react-rss-brand-news/static/js/2.26d95d34.chunk.js.map",
+    "static/js/2.f2c1324d.chunk.js": "/react-rss-brand-news/static/js/2.f2c1324d.chunk.js",
+    "static/js/2.f2c1324d.chunk.js.map": "/react-rss-brand-news/static/js/2.f2c1324d.chunk.js.map",
     "static/js/3.bce8dbc5.chunk.js": "/react-rss-brand-news/static/js/3.bce8dbc5.chunk.js",
     "static/js/3.bce8dbc5.chunk.js.map": "/react-rss-brand-news/static/js/3.bce8dbc5.chunk.js.map",
     "index.html": "/react-rss-brand-news/index.html",
     "static/css/main.7fc2852b.chunk.css.map": "/react-rss-brand-news/static/css/main.7fc2852b.chunk.css.map",
-    "static/js/2.26d95d34.chunk.js.LICENSE.txt": "/react-rss-brand-news/static/js/2.26d95d34.chunk.js.LICENSE.txt"
+    "static/js/2.f2c1324d.chunk.js.LICENSE.txt": "/react-rss-brand-news/static/js/2.f2c1324d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.820296c4.js",
-    "static/js/2.26d95d34.chunk.js",
+    "static/js/2.f2c1324d.chunk.js",
     "static/css/main.7fc2852b.chunk.css",
-    "static/js/main.b6507ac0.chunk.js"
+    "static/js/main.76520f6c.chunk.js"
   ]
 }
