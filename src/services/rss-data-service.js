@@ -87,16 +87,16 @@ function xmlCnnToObject(data) {
         console.log("Loop ", counter++);
         // console.log("item = ", item);
         // console.log("item try = ", item.getElementsByTagName("title"));
-        // const media  =  item.getElementsByTagName("media:content");
-        // let imgUrl = "/#"
-        // console.log("media = " , media)
-        // if(media.length > 0){
-        //     const media2 = media[media.length-1];
-        //     console.log("media 2 ",  media2);
-        //     imgUrl = media2.getAttribute("url");
-        //     console.log("imgUrl = " + imgUrl)
-        //
-        // }
+        const media  =  item.getElementsByTagName("media:content");
+        let imgUrl = "/#"
+        console.log("media = " , media)
+        if(media.length > 0){
+            const media2 = media[media.length-1];
+            console.log("media 2 ",  media2);
+            imgUrl = media2.getAttribute("url");
+            console.log("imgUrl = " + imgUrl)
+
+        }
 
 
 
