@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Route, Switch} from "react-router-dom";
 import {PostsA} from "../posts-pages/PostsA";
 import {MockData1} from "../../services/mock-data";
-import {getCnnData} from "../../services/rss-data-service";
+import {getCnnData, getFoxData} from "../../services/rss-data-service";
 import {cnnUrl, myProxy} from "../../SystemGlobals";
 
 
@@ -16,6 +16,7 @@ export function AppMainView() {
         console.log("Here will come all data - main view.");
         //    getCnnData(url, callback
         getCnnData(setCnnData);
+        getFoxData(setFoxData);
 
 
     }, []);
@@ -24,6 +25,12 @@ export function AppMainView() {
         console.log("THis = ");
         setAllData(allData.concat(cnnData));
     }, [cnnData]);
+
+    useEffect(() => {
+        console.log("Change in fox data ")
+        console.log("THis = ");
+        setAllData(allData.concat(foxData));
+    }, [foxData]);
 
     return (
         <Switch>
