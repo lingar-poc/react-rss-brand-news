@@ -21,6 +21,11 @@ export function AppMainView() {
 
 
     }, []);
+    useEffect(( ) => {
+        console.log("Change in cnn data ")
+        console.log("THis = ");
+        setAllData(allData.concat(cnnData));
+    }, [cnnData]);
 
     return (
         <Switch>
@@ -42,7 +47,7 @@ export function AppMainView() {
             {
                 <Route path="/">
 
-                    <PostsA provider="ALL" postsData = {cnnData}/>
+                    <PostsA provider="ALL" postsData = {allData}/>
                 </Route>
             }
         </Switch>

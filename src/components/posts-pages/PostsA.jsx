@@ -23,7 +23,7 @@ export function PostsA(props) {
             <div className="box">
                 <h2><span>Coming soon... latest news from: <b>{props.provider}</b></span></h2>
                 <a href="https://github.com/lingar-poc/react-rss-brand-news"
-                   target="_blank" className="see-all">See The source code(=code files) of this project</a>
+                   target="_blank" className="see-all">See The source code </a>
                 <div className="cl">&nbsp;</div>
                 {/*This is the posts container ... */}
                 <div className="posts">
@@ -33,7 +33,7 @@ export function PostsA(props) {
                         props.postsData.length > 0 ?
                             props.postsData.map((item, idx) => {
                                 return (
-                                    <div className={idx % 2 === 0 || idx === 0 ? "post " : "post last"} key={idx}>
+                                    <div className={idx % 2 === 0 ? "post " : "post last"} key={idx}>
                                         <div className="image"><a href="#"><img
                                             src={process.env.PUBLIC_URL + "/images/post-1.jpg"}
                                             alt=""/></a></div>
