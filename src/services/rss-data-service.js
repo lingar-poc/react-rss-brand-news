@@ -82,9 +82,22 @@ function xmlCnnToObject(data) {
     let counter = 0;
     for (let item of items) {
         // console.log("Html = ", item.innerHTML);
-        // console.log("Loop ", counter++)
+        const link =  item.getElementsByTagName("link")[0].innerHTML;
+        // console.log("Link = ", link)
+        console.log("Loop ", counter++);
         // console.log("item = ", item);
         // console.log("item try = ", item.getElementsByTagName("title"));
+        // const media  =  item.getElementsByTagName("media:content");
+        // let imgUrl = "/#"
+        // console.log("media = " , media)
+        // if(media.length > 0){
+        //     const media2 = media[media.length-1];
+        //     console.log("media 2 ",  media2);
+        //     imgUrl = media2.getAttribute("url");
+        //     console.log("imgUrl = " + imgUrl)
+        //
+        // }
+
 
 
         let title = item.getElementsByTagName("title")[0].innerHTML;
@@ -105,7 +118,7 @@ function xmlCnnToObject(data) {
         // console.log("description = ", description);
 
 
-        let obj1 = {title: title, description: description, provider: "cnn"};
+        let obj1 = {title: title, description: description, link: link, provider: "cnn"};
         arrayOfData.push(obj1);
 
 

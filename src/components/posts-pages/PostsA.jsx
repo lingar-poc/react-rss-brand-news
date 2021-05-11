@@ -18,7 +18,7 @@ export function PostsA(props) {
 
     useEffect(() => {
         console.log("PostA changed. props = ", props);
-        getCnnData(handleData);
+        // getCnnData(handleData);
         // getCnnData(myProxy + cnnLatestUrl, handleData);
 
 
