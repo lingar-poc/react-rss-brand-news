@@ -431,3 +431,11 @@ h4 a {
 #footer .rf {
 	float:right;
 }
+/**ADDED by lingar**/
+.thumbnail-image{
+	float: left;
+}
+.thumbnail-image img{
+	width:60px;
+	height:60px;
+}

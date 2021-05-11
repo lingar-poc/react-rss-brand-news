@@ -1,15 +1,17 @@
-function onSuccess() {
+import {cnnUrl, myProxy} from "../SystemGlobals";
+
+function onCnnSuccess() {
     console.log("Request done well.");
     //Here we define what values will be passed to the callback, and we make it invoke
     //It's about functional programming. It's help U do reverse things in different ways.
 
-    // console.log("this onSuccess = ", this);
+    // console.log("this onCnnSuccess = ", this);
 
     // this.callback.apply(this, this.arguments);
     let xml = this.responseXML;
 
     console.log("XML = \n", xml)
-    let dataObj = xmlToObject(xml);//converting the xml to object
+    let dataObj = xmlCnnToObject(xml);//converting the xml to object
     console.log("Data object = ", dataObj);
     const data = [dataObj];
 
@@ -44,16 +46,16 @@ function onFailure() {
 
 
 
-function getData(url, callback /*, opt_arg1, opt_arg2, ... */) {
-    console.log("getData")
+function getCnnData(callback /*, opt_arg1, opt_arg2, ... */) {
+    console.log("getCnnData")
     let xhr = new XMLHttpRequest();
     //this callback is predefinde prop of the xhr
     xhr.callback = callback;//will set the callback of this xhr (will be used at the success function)
 
     // xhr.arguments = Array.prototype.slice.call(arguments, 2);//U can add optional args to callback by this idea
-    xhr.onload = onSuccess;
+    xhr.onload = onCnnSuccess;
     xhr.onerror = onFailure;
-    xhr.open("GET", url, true);
+    xhr.open("GET", myProxy + cnnUrl, true);
     xhr.send(null);
 }
 
@@ -72,7 +74,7 @@ const RssDataService = {
  * @returns {[]} - Array object with many news items.
  */
 
-function xmlToObject(data) {
+function xmlCnnToObject(data) {
     let arrayOfData = [];
     //itemObj = {title: ..., description: ...};
     let items = data.getElementsByTagName('item');//this is array so u need to found the first element
@@ -103,7 +105,7 @@ function xmlToObject(data) {
         // console.log("description = ", description);
 
 
-        let obj1 = {title: title, description: description};
+        let obj1 = {title: title, description: description, provider: "cnn"};
         arrayOfData.push(obj1);
 
 
@@ -113,4 +115,4 @@ function xmlToObject(data) {
 
 }
 
-export {getData, handleData};
+export {getCnnData, handleData};
