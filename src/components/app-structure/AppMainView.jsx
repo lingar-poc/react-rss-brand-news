@@ -7,21 +7,21 @@ import {cnnUrl, myProxy} from "../../SystemGlobals";
 
 
 export function AppMainView() {
-    const [allData, setAllData]= useState([]);
+    const [allData, setAllData] = useState([]);
     const [cnnData, setCnnData] = useState([]);
-    const [foxData, setFoxData]= useState([]);
+    const [foxData, setFoxData] = useState([]);
     const [cnbcData, setCnbcData] = useState([]);
     useEffect(() => {
         //U need to do it at the useState creation, for make it before the rendering.
         //TODO- it's not good practice. U do unnecessary things. It's just for starting.
         // setCnnData(MockData1);
         console.log("Here will come all data - main view.");
-    //    getData(url, callback
-        getData(myProxy + cnnUrl ,setCnnData);
+        //    getData(url, callback
+        getData(myProxy + cnnUrl, setCnnData);
 
 
     }, []);
-    useEffect(( ) => {
+    useEffect(() => {
         console.log("Change in cnn data ")
         console.log("THis = ");
         setAllData(allData.concat(cnnData));
@@ -33,22 +33,14 @@ export function AppMainView() {
                 <PostsA provider="FOX"/>
             </Route>
             <Route path="/cnbc">
-                <PostsA provider="CNBC"/>
+                <PostsA provider="CNBC" />
             </Route>
             <Route path="/cnn">
-                {/*{alert("sss")} - won't work*/}
-
-                <PostsA provider="CNN"/>
+                <PostsA provider="CNN" postsData={cnnData}/>
             </Route>
-            {/*<Route path="/">*/}
-            {/*    /!*pass here the data*!/*/}
-            {/*    <PostsA provider="ALL"/>*/}
-            {/*</Route>*/}
-            {
-                <Route path="/">
-
-                    <PostsA provider="ALL" postsData = {allData}/>
-                </Route>
+            <Route path="/">
+                <PostsA provider="ALL" postsData={allData}/>
+            </Route>
             }
         </Switch>
     );

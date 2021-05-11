@@ -30,7 +30,7 @@ export function PostsA(props) {
                     {/*Item 1*/}
 
                     {
-                        props.postsData.length > 0 ?
+                        props.postsData && props.postsData.length > 0 ?
                             props.postsData.map((item, idx) => {
                                 return (
                                     <div className={idx % 2 === 0 ? "post " : "post last"} key={idx}>
