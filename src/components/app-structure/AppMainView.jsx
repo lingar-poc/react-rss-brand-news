@@ -11,6 +11,7 @@ export function AppMainView() {
         //U need to do it at the useState creation, for make it before the rendering.
         //TODO- it's not good practice. U do unnecessary things. It's just for starting.
         setCnnData(MockData1);
+        console.log("Here will come all data - main view.")
     }, []);
 
     return (
