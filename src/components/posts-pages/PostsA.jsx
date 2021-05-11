@@ -30,22 +30,23 @@ export function PostsA(props) {
                     {/*Item 1*/}
 
                     {
-                        props.postsData?
-                        props.postsData.map((item, idx) => {
-                            return(
-                                <div className={idx%2  === 0 || idx === 0 ? "post " : "post last"} key={idx}>
-                                    <div className="image"><a href="#"><img src={process.env.PUBLIC_URL + "/images/post-1.jpg"}
-                                                                            alt=""/></a></div>
-                                    <div className="data">
-                                        <h4><a href="#">{item.title}</a>
-                                        </h4>
-                                        <p>{item.description} </p>
+                        props.postsData.length > 0 ?
+                            props.postsData.map((item, idx) => {
+                                return (
+                                    <div className={idx % 2 === 0 || idx === 0 ? "post " : "post last"} key={idx}>
+                                        <div className="image"><a href="#"><img
+                                            src={process.env.PUBLIC_URL + "/images/post-1.jpg"}
+                                            alt=""/></a></div>
+                                        <div className="data">
+                                            <h4><a href="#">{item.title}</a>
+                                            </h4>
+                                            <p>{item.description} </p>
+                                        </div>
                                     </div>
-                                </div>
-                            );
+                                );
 
-                        })
-                        : <h1>Loading</h1>
+                            })
+                            : <h1>Loading</h1>
                     }
                     {/*<div className="post">*/}
                     {/*    <div className="image"><a href="#"><img src={process.env.PUBLIC_URL + "/images/post-1.jpg"}*/}
