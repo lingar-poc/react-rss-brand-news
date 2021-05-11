@@ -1,6 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {getData, handleData} from "../../services/rss-data-service";
+
+const cnnUrl = "http://rss.cnn.com/rss/edition.rss";//latest
+const foxUrl = "http://feeds.foxnews.com/foxnews/latest";//latest
+const cnbc = "https://www.cnbc.com/id/100003114/device/rss/rss.html";//latest
+const myProxy = "https://lingar-allow-cors.herokuapp.com/";
 
 export function PostsA(props){
+
+    useEffect(()=>{
+        console.log("PostA created. props = ", props);
+        getData(myProxy + cnnUrl, handleData);
+
+    });
 
     return(
         <div id="content">
