@@ -40,16 +40,17 @@ export function PostsA(props) {
                             props.postsData.map((item, idx) => {
                                 return (
                                     <div className={idx % 2 === 0 ? "post " : "post last"} key={idx}>
-                                        <div className="thumbnail-image"><a href="#"><img
+                                        <div className="thumbnail-image"><a href={item.link} >
+                                            <img
                                             src={
                                                 props.provider === "ALL" ?
                                                     process.env.PUBLIC_URL + "/images/" + providerImg[item.provider]
                                                     :
-                                                    process.env.PUBLIC_URL + "/images/post-4.jpg"
+                                                     item.imgUrl
                                             }
-                                            alt=""/></a></div>
+                                            alt="no image"/></a></div>
                                         <div className="data">
-                                            <h4><a href="#">{item.title}</a>
+                                            <h4><a href={item.link} target= "_blank">{item.title}</a>
                                             </h4>
                                             <p>{item.description} </p>
                                         </div>
