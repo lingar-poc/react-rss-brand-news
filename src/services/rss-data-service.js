@@ -23,12 +23,12 @@ function onSuccess() {
     //it refer it like arbitrary args. so for example:
     /*
 
-function handleData2(data) {
+            function handleData2(data) {
 
-    console.log("data = " , data);//will show the first element of array
-}
-this for example will generate a run time error
-this.callback.apply(this,12);
+                console.log("data = " , data);//will show the first element of array
+            }
+            this for example will generate a run time error
+            this.callback.apply(this,12);
      */
 
 
