@@ -26,7 +26,7 @@ export function PostsA(props) {
     return (
         <div id="content">
             <div className="box">
-                <h2><span>Coming soon... latest news from: <b>{props.provider.toUpperCase()}</b></span></h2>
+                <h2><span>Latest news from <b>{props.provider.toUpperCase()}</b></span></h2>
                 <a href="https://github.com/lingar-poc/react-rss-brand-news"
                    target="_blank" className="see-all">See The source code </a>
                 <div className="cl">&nbsp;</div>
