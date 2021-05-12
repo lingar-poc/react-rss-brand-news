@@ -40,7 +40,7 @@ export function PostsA(props) {
                             props.postsData.map((item, idx) => {
                                 return (
                                     <div className={idx % 2 === 0 ? "post " : "post last"} key={idx}>
-                                        <div className="thumbnail-image"><a href={item.link} >
+                                        <div className="thumbnail-image"><a href={item.link} target= "_blank">
                                             <img
                                             src={
                                                 props.provider === "ALL" || props.provider === "fox" ?

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useLayoutEffect} from "react";
 import {Route, Switch} from "react-router-dom";
 import {PostsA} from "../posts-pages/PostsA";
 import {MockData1} from "../../services/mock-data";
@@ -7,35 +7,62 @@ import {cnnUrl, myProxy} from "../../SystemGlobals";
 
 
 export function AppMainView() {
+    let arr = ["a", "b","c","d","e"];
+    console.log("arr = ", arr);
+    console.log("arr after shuffle = ", shakeArray(arr))
     const [allData, setAllData] = useState([]);
+    const [shuffledData, setshuffledData] = useState([]);
+
     const [cnnData, setCnnData] = useState([]);
     const [foxData, setFoxData] = useState([]);
+
     const [cnbcData, setCnbcData] = useState([]);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         console.log("Here will come all data - main view.");
         //    getCnnData(url, callback
         getCnnData(setCnnData);
         getFoxData(setFoxData);
+        console.log("finished useEffect1")
 
 
     }, []);
-    useEffect(() => {
+    useLayoutEffect(() => {
         console.log("Change in cnn data ")
         console.log("THis = ");
         setAllData(allData.concat(cnnData));
+        // setAllData(shakeArray(allData));
+
+
+        // setAllData(shakeArray(allData));
+
     }, [cnnData]);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         console.log("Change in fox data ")
         console.log("THis = ");
         setAllData(allData.concat(foxData));
+        // shakeArray(allData);
+        // setAllData(shakeArray(allData));
+
+        // console.log("shaked array = " , shakeArray(allData))
+        // setAllData(shakeArray(allData));
     }, [foxData]);
+    useLayoutEffect(() => {
+        console.log("Change in all data ")
+
+        setshuffledData(shakeArray(allData));
+        // shakeArray(allData);
+        // setAllData(shakeArray(allData));
+
+        // console.log("shaked array = " , shakeArray(allData))
+        // setAllData(shakeArray(allData));
+    }, [allData]);
 
     return (
         <Switch>
             <Route path="/fox">
-                <PostsA provider="fox" postsData = {foxData}/>
+                <PostsA provider="fox" postsData={foxData}/>
             </Route>
             <Route path="/cnbc">
                 <PostsA provider="cnbc"/>
@@ -44,9 +71,23 @@ export function AppMainView() {
                 <PostsA provider="cnn" postsData={cnnData}/>
             </Route>
             <Route path="/">
-                <PostsA provider="ALL" postsData={true? allData: null}/>
+                <PostsA provider="ALL" postsData={true ? shuffledData : null}/>
             </Route>
             }
         </Switch>
     );
+}
+
+
+/**
+ * Shuffles array in place. ES6 version
+ * @param {Array} a items An array containing the items.
+ */
+function shakeArray(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        console.log(a[i]);
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
 }
