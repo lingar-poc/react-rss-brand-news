@@ -1,20 +1,23 @@
 # react-rss-brand-news + Accessibility
 
 
-## First Step 
 
-In this step we have created the first template for the website. 
+## Second Step - the website is ready
 
-I took the template from here : 
 
-https://www.free-css.com/free-css-templates/page137/megazzine
+In this step I've created the news pages and make them working properly.
 
-I build the app with this template and have added 3 pages for each provider.
+see there the website: 
 
-Next, I will do in the main page the latest news of 3 providers, and at 
-each tab will be only the latest news of the specific provider.
+https://lingar-poc.github.io/react-rss-brand-news/#/
 
-You can switch between the pages and see how the provider "name" is changed.
+**Notice - there are probably some more efficient or elegant  ways to do 
+those things. Anyway for the current need what there is- is enough.
+
+TODO next: 
+
+Make better static icons, and content.
+Maybe use another hooks or promises for make things work better.
 
 **You can see the online website here :**
 
