@@ -2,7 +2,7 @@ import React, {useState, useEffect, useLayoutEffect} from "react";
 import {Route, Switch} from "react-router-dom";
 import {PostsA} from "../posts-pages/PostsA";
 import {MockData1} from "../../services/mock-data";
-import {getCnnData, getFoxData} from "../../services/rss-data-service";
+import {getCnbcData, getCnnData, getFoxData} from "../../services/rss-data-service";
 import {cnnUrl, myProxy} from "../../SystemGlobals";
 
 
@@ -23,6 +23,7 @@ export function AppMainView() {
         //    getCnnData(url, callback
         getCnnData(setCnnData);
         getFoxData(setFoxData);
+        getCnbcData(setCnbcData);
         console.log("finished useEffect1")
 
 
@@ -48,6 +49,18 @@ export function AppMainView() {
         // console.log("shaked array = " , shakeArray(allData))
         // setAllData(shakeArray(allData));
     }, [foxData]);
+
+
+    useLayoutEffect(() => {
+        console.log("Change in cnbc data ")
+        console.log("THis = ");
+        setAllData(allData.concat(cnbcData));
+        // shakeArray(allData);
+        // setAllData(shakeArray(allData));
+
+        // console.log("shaked array = " , shakeArray(allData))
+        // setAllData(shakeArray(allData));
+    }, [cnbcData]);
     useLayoutEffect(() => {
         console.log("Change in all data ")
 
@@ -65,7 +78,7 @@ export function AppMainView() {
                 <PostsA provider="fox" postsData={foxData}/>
             </Route>
             <Route path="/cnbc">
-                <PostsA provider="cnbc"/>
+                <PostsA provider="cnbc" postsData = {cnbcData}/>
             </Route>
             <Route path="/cnn">
                 <PostsA provider="cnn" postsData={cnnData}/>
@@ -85,7 +98,6 @@ export function AppMainView() {
  */
 function shakeArray(a) {
     for (let i = a.length - 1; i > 0; i--) {
-        console.log(a[i]);
         const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
     }

@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import {getCnnData, handleData} from "../../services/rss-data-service";
 
 //cnn index - https://edition.cnn.com/services/rss/
 const cnnUrl = "http://rss.cnn.com/rss/edition.rss";//latest
@@ -13,7 +12,7 @@ export function PostsA(props) {
     const providerImg = {
         cnn: "cnn-thumbnail-1.png",
         fox: "fox-thumbnail.png",
-        cnbc: "cnbc-thumbnail"
+        cnbc: "cnbc-thumbnail.svg"
     };
 
     useEffect(() => {
@@ -43,7 +42,7 @@ export function PostsA(props) {
                                         <div className="thumbnail-image"><a href={item.link} target= "_blank">
                                             <img
                                             src={
-                                                props.provider === "ALL" || props.provider === "fox" ?
+                                                props.provider === "ALL" || props.provider === "fox" || props.provider === "cnbc" ?
                                                     process.env.PUBLIC_URL + "/images/" + providerImg[item.provider]
                                                     :
                                                      item.imgUrl
