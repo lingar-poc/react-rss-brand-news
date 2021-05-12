@@ -44,7 +44,7 @@ export function AppMainView() {
                 <PostsA provider="cnn" postsData={cnnData}/>
             </Route>
             <Route path="/">
-                <PostsA provider="ALL" postsData={allData}/>
+                <PostsA provider="ALL" postsData={true? allData: null}/>
             </Route>
             }
         </Switch>
