@@ -12,7 +12,7 @@ export function PostsA(props) {
 
     const providerImg = {
         cnn: "cnn-thumbnail-1.png",
-        fox: "fox-thumbnail",
+        fox: "fox-thumbnail.png",
         cnbc: "cnbc-thumbnail"
     };
 
@@ -43,7 +43,7 @@ export function PostsA(props) {
                                         <div className="thumbnail-image"><a href={item.link} >
                                             <img
                                             src={
-                                                props.provider === "ALL" ?
+                                                props.provider === "ALL" || props.provider === "fox" ?
                                                     process.env.PUBLIC_URL + "/images/" + providerImg[item.provider]
                                                     :
                                                      item.imgUrl

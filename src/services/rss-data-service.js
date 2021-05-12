@@ -9,7 +9,9 @@ function handleData(data){
 /**Handling Fox Data **/
 
 function onFoxSuccess() {
-    console.log("Request done well.");
+    console.log("Fox Request done well.", this.response);
+    // console.log("request text = ", this.responseText)
+    //http://feeds.foxnews.com/foxnews/latest
     //Here we define what values will be passed to the callback, and we make it invoke
     //It's about functional programming. It's help U do reverse things in different ways.
 
@@ -54,6 +56,7 @@ function getFoxData(callback /*, opt_arg1, opt_arg2, ... */) {
     xhr.callback = callback;//will set the callback of this xhr (will be used at the success function)
 
     // xhr.arguments = Array.prototype.slice.call(arguments, 2);//U can add optional args to callback by this idea
+    xhr.responseType = "document";
     xhr.onload = onFoxSuccess;
     xhr.onerror = onFailure;
     xhr.open("GET", myProxy + foxUrl, true);
@@ -70,53 +73,31 @@ function getFoxData(callback /*, opt_arg1, opt_arg2, ... */) {
  */
 
 function xmlFoxToObject(data) {
+    console.log("xml fox, data = " , data)
     let arrayOfData = [];
     //itemObj = {title: ..., description: ...};
-    let items = data.getElementsByTagName('item');//this is array so u need to found the first element
-    // console.log("items = ", items);
+    // let items = data.getElementsByTagName('item');//this is array so u need to found the first element
+    // let items = data.querySelectorAll(".regularitem");//getElementsByClassName
+    let items = data.getElementsByClassName("regularitem");
+    console.log("items = ", items);
     let counter = 0;
     for (let item of items) {
-        // console.log("Html = ", item.innerHTML);
+        console.log("Html = ", item.innerHTML);
         //Getting the item link
-        const link =  item.getElementsByTagName("link")[0].innerHTML;
+        // const link =  item.getElementsByTagName("link")[0].innerHTML;
         // console.log("Link = ", link)
         // console.log("Loop ", counter++);
         // console.log("item = ", item);
-        // console.log("item try = ", item.getElementsByTagName("title"));
+        let content = item.getElementsByClassName("itemtitle")[0];
+        let link = content.getElementsByTagName("a")[0].getAttribute("href");
+        const title = content.getElementsByTagName("a")[0].innerHTML;
+        const description = item.getElementsByClassName("itemcontent")[0].innerHTML;
+        console.log(link , title, description)
 
-        //getting the item image
-        const media  =  item.getElementsByTagName("media:content");
-        let imgUrl = "/#"
-        console.log("media = " , media)
-        if(media.length > 0){
-            const media2 = media[media.length-1];
-            // console.log("media 2 ",  media2);
-            imgUrl = media2.getAttribute("url");
-            // console.log("imgUrl = " + imgUrl)
+        console.log("lingar = " + item.getElementsByClassName("itemtitle")[0].getElementsByTagName("a")[0])
+        console.log("item title = ", item.getElementsByClassName("itemtitle")[0].getElementsByTagName("a")[0].innerHTML);
 
-        }
-
-
-
-        let title = item.getElementsByTagName("title")[0].innerHTML;
-        //removing cdata garbage
-        title = title.trim().replace(/^(\/\/\s*)?<!\[CDATA\[|(\/\/\s*)?\]\]>$/g, '');
-
-        // console.log("Title = ", title);
-        // console.log(item.getElementsByTagName("description"));
-        let description = "no description";
-        let innerData = item.getElementsByTagName("description");
-        // console.log(innerData)
-        if (innerData.length > 0) {
-            description = item.getElementsByTagName("description")[0].innerHTML;
-            //removing cdata garbage
-            description = description.trim().replace(/^(\/\/\s*)?<!\[CDATA\[|(\/\/\s*)?\]\]>$/g, '');
-
-        }
-        // console.log("description = ", description);
-
-
-        let obj1 = {title: title, description: description, link: link, provider: "cnn", imgUrl: imgUrl};
+        let obj1 = {title: title, description: description, link: link, provider: "fox", imgUrl: "/#"};
         arrayOfData.push(obj1);
 
 
@@ -216,7 +197,7 @@ function xmlCnnToObject(data) {
         //getting the item image
         const media  =  item.getElementsByTagName("media:content");
         let imgUrl = "/#"
-        console.log("media = " , media)
+        // console.log("media = " , media)
         if(media.length > 0){
             const media2 = media[media.length-1];
             // console.log("media 2 ",  media2);

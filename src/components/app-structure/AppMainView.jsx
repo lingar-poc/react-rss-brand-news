@@ -35,7 +35,7 @@ export function AppMainView() {
     return (
         <Switch>
             <Route path="/fox">
-                <PostsA provider="fox"/>
+                <PostsA provider="fox" postsData = {foxData}/>
             </Route>
             <Route path="/cnbc">
                 <PostsA provider="cnbc"/>
