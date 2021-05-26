@@ -8,7 +8,12 @@ export function AppHeader() {
         <header>
             {/*TODO - Make proper logo. */}
             <div id="header">
-                <h1 id="logo"><a href="#">BRAND NEWS</a></h1>
+                <div id="logo">
+                    <h1 ><a href="#"><span id ="logo-p1">BRAND</span><span id = "logo-p2">NEWS</span> </a></h1>
+                    <h2>Done with love by <a href= "https://www.linkedin.com/in/izhar-mashkif-86a01913a/" target = "_blank">Lingar</a> </h2>
+
+                </div>
+
                 <div className="top-bar">
                     <div className="links"><a href="#">SIGN IN</a> <a href="#">SIGN UP</a> <a href="#"
                                                                                               className="rss">SUBSCRIBE</a>

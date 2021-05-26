@@ -7,9 +7,6 @@ import {cnnUrl, myProxy} from "../../SystemGlobals";
 
 
 export function AppMainView() {
-    let arr = ["a", "b","c","d","e"];
-    console.log("arr = ", arr);
-    console.log("arr after shuffle = ", shakeArray(arr))
     const [allData, setAllData] = useState([]);
     const [shuffledData, setshuffledData] = useState([]);
 
@@ -19,57 +16,30 @@ export function AppMainView() {
     const [cnbcData, setCnbcData] = useState([]);
 
     useLayoutEffect(() => {
-        console.log("Here will come all data - main view.");
-        //    getCnnData(url, callback
+        // console.log("Here will come all data - main view.");
         getCnnData(setCnnData);
         getFoxData(setFoxData);
         getCnbcData(setCnbcData);
-        console.log("finished useEffect1")
 
 
     }, []);
     useLayoutEffect(() => {
-        console.log("Change in cnn data ")
-        console.log("THis = ");
         setAllData(allData.concat(cnnData));
-        // setAllData(shakeArray(allData));
-
-
-        // setAllData(shakeArray(allData));
 
     }, [cnnData]);
 
     useLayoutEffect(() => {
-        console.log("Change in fox data ")
-        console.log("THis = ");
         setAllData(allData.concat(foxData));
-        // shakeArray(allData);
-        // setAllData(shakeArray(allData));
 
-        // console.log("shaked array = " , shakeArray(allData))
-        // setAllData(shakeArray(allData));
     }, [foxData]);
 
 
     useLayoutEffect(() => {
-        console.log("Change in cnbc data ")
-        console.log("THis = ");
         setAllData(allData.concat(cnbcData));
-        // shakeArray(allData);
-        // setAllData(shakeArray(allData));
 
-        // console.log("shaked array = " , shakeArray(allData))
-        // setAllData(shakeArray(allData));
     }, [cnbcData]);
     useLayoutEffect(() => {
-        console.log("Change in all data ")
-
         setshuffledData(shakeArray(allData));
-        // shakeArray(allData);
-        // setAllData(shakeArray(allData));
-
-        // console.log("shaked array = " , shakeArray(allData))
-        // setAllData(shakeArray(allData));
     }, [allData]);
 
     return (
@@ -78,7 +48,7 @@ export function AppMainView() {
                 <PostsA provider="fox" postsData={foxData}/>
             </Route>
             <Route path="/cnbc">
-                <PostsA provider="cnbc" postsData = {cnbcData}/>
+                <PostsA provider="cnbc" postsData={cnbcData}/>
             </Route>
             <Route path="/cnn">
                 <PostsA provider="cnn" postsData={cnnData}/>
