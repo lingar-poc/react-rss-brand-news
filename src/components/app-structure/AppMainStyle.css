@@ -139,7 +139,9 @@ header, main, footer{
 	display:block;
 	width:250px;
 	height:63px;
-	background:url(./images/logo.gif);
+	/*brands-news-logo.png*/
+	/*background:url(./images/logo.gif);*/
+	background:url(./images/brands-news-logo.png);
 	font-size:0;
 	line-height:0;
 	text-indent:-4000px;
